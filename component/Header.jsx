@@ -1,5 +1,5 @@
 import React from 'react'
-import Vediocontrol from './vediocontrol'
+import SequentialVideoPlayer from './Vediocontrol'
 import Link from 'next/link'
 
 const Header = () => {
@@ -7,7 +7,7 @@ const Header = () => {
         <>
             <header className="relative flex justify-center items-center w-full h-screen">
                 {/* Background Video */}
-                <Vediocontrol />
+                <SequentialVideoPlayer />
 
                 {/* Overlay Content */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 sm:px-10 z-10">

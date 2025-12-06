@@ -17,7 +17,7 @@ import { useParams, useRouter } from "next/navigation";
 import Footer from "@/component/Footer";
 import { handleError, handleSuccess } from "@/frontend_utalties/notfication_control";
 import WrkrBnCLoader from "@/component/loader";
-import Setting from "@/component/setting";
+import Setting from "@/component/Setting";
 import Cookies from "js-cookie";
 
 export default function ClientDashboard() {

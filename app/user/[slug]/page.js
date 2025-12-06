@@ -7,7 +7,7 @@ import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
 import Footer from "@/component/Footer";
 import { handleError, handleSuccess } from "@/frontend_utalties/notfication_control";
-import Setting from "@/component/setting";
+import Setting from "@/component/Setting";
 import Services from "@/component/Services";
 import DashboardSkeleton from "@/component/loader";
 import Cookies from "js-cookie";
