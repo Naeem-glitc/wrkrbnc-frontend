@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image'
-import Client_Navbar from '/component/Client_Navbar';
+import Client_Navbar from '@/component/Client_Navbar';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { User } from "lucide-react";

@@ -1,6 +1,6 @@
 "use client"
-import Client_signUp from "/component/Client_signUp";
-import Worker_signUp from "/component/Worker_signUp";
+import Client_signUp from "@/component/Client_signUp";
+import Worker_signUp from "@/component/Worker_signUp";
 import { motion } from "framer-motion";
 import { Briefcase, User } from "lucide-react";
 import { useState } from "react";
