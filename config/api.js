@@ -1,6 +1,2 @@
-
-const API_BASE_URL = process.env.NODE_ENV === 'production'
-  ? 'https://wrkrbnc-backend.vercel.app/'  
-  : 'http://localhost:3001';               
-
+const API_BASE_URL = "https://wrkrbnc-backend.vercel.app/";
 export default API_BASE_URL;
