@@ -1,6 +1,4 @@
-// Updated Responsive Client Dashboard - Sidebar becomes top navbar on small screens
 "use client";
-
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import {
@@ -19,6 +17,7 @@ import { handleError, handleSuccess } from "@/frontend_utalties/notfication_cont
 import WrkrBnCLoader from "@/component/loader";
 import Setting from "@/component/Setting";
 import Cookies from "js-cookie";
+import API_BASE_URL from '@/config/api';
 
 export default function ClientDashboard() {
   const router = useRouter();
@@ -31,7 +30,7 @@ export default function ClientDashboard() {
   useEffect(() => {
     const fetchClient = async () => {
       try {
-        const res = await axios.get(`http://localhost:3001/getClientDetails/${slug}`);
+        const res = await axios.get(`${API_BASE_URL}/getClientDetails/${slug}`);
         if (res.data.success) {
           setClient(res.data.data);
         }
@@ -50,7 +49,7 @@ export default function ClientDashboard() {
     if (!confirmLogout) return;
 
     try {
-      const resp = await axios.post("http://localhost:3001/logout");
+      const resp = await axios.post(`${API_BASE_URL}/logout`);
       if (resp.data.success) {
         handleSuccess("Logged out successfully");
         Cookies.remove("token");
@@ -188,7 +187,7 @@ export default function ClientDashboard() {
                       <div className="flex gap-4 items-center">
                         <div className="w-16 h-16 relative rounded-full overflow-hidden border">
                           <Image
-                            src={`http://localhost:3001/uploads/${worker.Profile_Pic}`}
+                            src={`${API_BASE_URL}/uploads/${worker.Profile_Pic}`}
                             alt="Worker"
                             fill
                             className="object-cover"

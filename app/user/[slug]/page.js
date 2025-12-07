@@ -12,6 +12,7 @@ import Services from "@/component/Services";
 import DashboardSkeleton from "@/component/loader";
 import Cookies from "js-cookie";
 import WrkrBnCLoader from "@/component/loader";
+import API_BASE_URL from '@/config/api';
 
 export default function WorkerDashboard() {
   const router = useRouter();
@@ -28,7 +29,7 @@ export default function WorkerDashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const UserInfo = await axios.get(`http://localhost:3001/getUserDetails/${slug}`)
+        const UserInfo = await axios.get(`${API_BASE_URL}/getUserDetails/${slug}`)
         if (UserInfo.data.success) {
           setWorker(UserInfo.data.data)
           setIsuser(true);
@@ -57,7 +58,7 @@ export default function WorkerDashboard() {
       return;
     }
     try {
-      const resp = await axios.post(`http://localhost:3001/addService/${slug}`, newService);
+      const resp = await axios.post(`${API_BASE_URL}/addService/${slug}`, newService);
       if (resp.data.success) {
         setWorker(resp.data.data);
         setNewService({ title: "", price: "" });
@@ -79,7 +80,7 @@ export default function WorkerDashboard() {
     }
 
     try {
-      const resp = await axios.post(`http://localhost:3001/addportfolio/${slug}`, data)
+      const resp = await axios.post(`${API_BASE_URL}/addportfolio/${slug}`, data)
       if (resp.data.success) {
         setWorker(resp.data.data);
         setNewPortfolio({ title: "", image: "" })
@@ -99,7 +100,7 @@ export default function WorkerDashboard() {
     const confirm = window.confirm("Are you sure you want to delete this service?");
     if (!confirm) return;
     try {
-      const resp = await axios.delete(`http://localhost:3001/deleteService/${slug}/${worker.services[index]._id}`);
+      const resp = await axios.delete(`${API_BASE_URL}/deleteService/${slug}/${worker.services[index]._id}`);
       if (resp.data.success) {
         setWorker({ ...worker, services: resp.data.data })
         handleSuccess(resp.data.message)
@@ -115,7 +116,7 @@ export default function WorkerDashboard() {
     const confirm = window.confirm("Are you sure you want to delete this portfolio?");
     if (!confirm) return;
     try {
-      const resp = await axios.delete(`http://localhost:3001/deletePortfolio/${slug}/${id}`);
+      const resp = await axios.delete(`${API_BASE_URL}/deletePortfolio/${slug}/${id}`);
       if (resp.data.success) {
         setWorker({ ...worker, portfolio: resp.data.data })
         handleSuccess(resp.data.message)
@@ -128,7 +129,7 @@ export default function WorkerDashboard() {
 
   const logout = async () => {
     try {
-      const resp = await axios.get("http://localhost:3001/logout", {
+      const resp = await axios.get(`${API_BASE_URL}/logout`, {
         withCredentials: true
       });
       if (resp.data.success) {

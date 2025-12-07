@@ -8,6 +8,7 @@ import { jwtDecode } from "jwt-decode";
 import { handleError } from "@/frontend_utalties/notfication_control";
 import axios from "axios";
 import Link from "next/link";
+import API_BASE_URL from "@/config/api";
 
 const Client_Navbar = () => {
   const [search, setSearch] = useState("");
@@ -24,7 +25,7 @@ const Client_Navbar = () => {
         const decoded = jwtDecode(token);
         const id = decoded.id;
 
-        const rsp = await axios.get(`http://localhost:3001/getClientDetails/${id}`);
+        const rsp = await axios.get(`${API_BASE_URL}/getClientDetails/${id}`);
 
         if (rsp.data.success) {
           setUser(rsp.data.data);

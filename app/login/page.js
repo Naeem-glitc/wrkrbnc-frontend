@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Lock, Eye, EyeOff  } from "lucide-react";
 import axios from "axios";
@@ -8,7 +8,7 @@ import { handleError, handleSuccess } from "@/frontend_utalties/notfication_cont
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Cookies from "js-cookie"
-import { jwtDecode } from "jwt-decode";
+import API_BASE_URL from '@/config/api';
 
 
 export default function LoginPage() {
@@ -25,7 +25,7 @@ export default function LoginPage() {
     e.preventDefault();
 
     try {
-      const user = await axios.post("http://localhost:3001/userLogin", form, {
+      const user = await axios.post(`${API_BASE_URL}/userLogin`, form, {
         headers: { 'Content-Type': 'application/json' },
         withCredentials: true
       })

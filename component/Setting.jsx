@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { handleError, handleSuccess } from '@/frontend_utalties/notfication_control'
 import { useRouter } from 'next/navigation'
-
+import API_BASE_URL from '@/config/api'
 
 const Setting = ({id}) => {
         const  router = useRouter();
@@ -12,7 +12,7 @@ const Setting = ({id}) => {
 
         try {
             window.confirm("Do you want to delete Account Permanently?")
-            const deleteAccount = await axios.delete(`http://localhost:3001/deleteUser/${id}`);
+            const deleteAccount = await axios.delete(`${API_BASE_URL}/deleteUser/${id}`);
             if (deleteAccount.data.success) {   
                 setTimeout(() => {
                     handleSuccess("Account has been removed!");

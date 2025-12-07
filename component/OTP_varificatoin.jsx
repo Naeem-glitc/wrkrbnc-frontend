@@ -5,6 +5,7 @@ import { ShieldCheck } from "lucide-react";
 import { useState } from 'react'
 import { handleError, handleSuccess } from '../frontend_utalties/notfication_control';
 import { useRouter } from 'next/navigation';
+import API_BASE_URL from '@/config/api';
 
 const OTP_varificatoin = ({ email, role }) => {
   const [OTP, setOTP] = useState("")
@@ -17,7 +18,7 @@ const OTP_varificatoin = ({ email, role }) => {
     e.preventDefault();
     try {
 
-      const res = await axios.post(`http://localhost:3001/create-${role}/varify-OTP`, { Email: email, otp: OTP });
+      const res = await axios.post(`${API_BASE_URL}/create-${role}/varify-OTP`, { Email: email, otp: OTP });
       if (res.data.success) {
         handleSuccess(res.data.message);
         setOTP("");

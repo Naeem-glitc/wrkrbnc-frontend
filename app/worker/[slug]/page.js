@@ -6,16 +6,18 @@ import axios from "axios";
 import { handleError, handleSuccess } from "@/frontend_utalties/notfication_control";
 import Link from "next/link";
 import WrkrBnCLoader from "@/component/loader";
+import API_BASE_URL from '@/config/api';
 
 export default function WorkerDetails() {
   const router = useRouter();
   const { slug } = useParams();
   const [worker, setWorker] = useState({});
   const [isLoading, setIsLoading] = useState(true)
+
   useEffect(() => {
     const fetchWorkerDetails = async () => {
       try {
-        const resp = await axios.get(`http://localhost:3001/getworkerdata/${slug}`)
+        const resp = await axios.get(`${API_BASE_URL}/getworkerdata/${slug}`)
         if (resp.data.success) {
           setWorker({ ...resp.data.data, services: resp.data.data.services || [] })
           handleSuccess("Worker details loaded successfully.");

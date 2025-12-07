@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { User, Mail, MapPin, Home, Lock, Eye, EyeOff } from "lucide-react";
 import { handleError, handleSuccess } from '../frontend_utalties/notfication_control.js';
 import OTP_varificatoin from './OTP_varificatoin.jsx';
+import API_BASE_URL from '@/config/api';
 
 const Client_signUp = ({ onBack }) => {
     const [email, setEmail] = useState("")
@@ -76,7 +77,7 @@ const Client_signUp = ({ onBack }) => {
                 form.append(key, formdata[key]);
             })
 
-            const response = await axios.post('http://localhost:3001/sign-up/client', form, {
+            const response = await axios.post(`${API_BASE_URL}/sign-up/client`, form, {
                 headers: { 'Content-Type': 'application/json' }
             })
             console.log(form)

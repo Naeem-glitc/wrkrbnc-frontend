@@ -104,7 +104,7 @@ const Worker_signUp = ({ onBack }) => {
         form.append('profile_photo', files);
       }
 
-      const response = await axios.post('http://localhost:3001/sign-up/worker', form, {
+      const response = await axios.post(`${API_BASE_URL}/sign-up/worker`, form, {
         headers: { 'Content-Type': 'multipart/form-data' }
       })
       console.log('Form data submitted:', formdata)

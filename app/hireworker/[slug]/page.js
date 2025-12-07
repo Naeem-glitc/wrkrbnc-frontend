@@ -4,11 +4,11 @@ import Client_Navbar from '@/component/Client_Navbar';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { User } from "lucide-react";
-import { handleError } from '@/frontend_utalties/notfication_control';
 import Footer from '@/component/Footer';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import WrkrBnCLoader from '@/component/loader';
+import API_BASE_URL from '@/config/api';
 
 
 const Page = () => {
@@ -21,7 +21,7 @@ const Page = () => {
   useEffect(() => {
     const fetchWorkers = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/get-all-workers')
+        const response = await axios.get(`${API_BASE_URL}/get-all-workers`)
         if (response.data.success) {
           setWorker(response.data.data);
           setIsLoading(false);
@@ -45,7 +45,7 @@ const Page = () => {
 
   const searchworker = async () => {
     try {
-      const resp = await axios.get(`http://localhost:3001/searchworker/search?query=${query}`);
+      const resp = await axios.get(`${API_BASE_URL}/searchworker/search?query=${query}`);
       
       if (resp.data.success && resp.data.data.length > 0) {
         setWorker(resp.data.data);
