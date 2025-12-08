@@ -49,14 +49,20 @@ export default function ClientDashboard() {
     if (!confirmLogout) return;
 
     try {
-      const resp = await axios.post(`${API_BASE_URL}/logout`);
+      const resp = await axios.get(`${API_BASE_URL}/logout`);
       if (resp.data.success) {
         handleSuccess("Logged out successfully");
         Cookies.remove("token");
         setTimeout(() => router.push("/login"), 1500);
       }
     } catch (error) {
-      handleError("Server error, please try again");
+      console.log("Backend logout unavailable, doing client-side cleanup");
+    handleSuccess("Logged out successfully");
+    Cookies.remove("token");
+    localStorage.clear(); // Add this to clear localStorage
+    sessionStorage.clear(); // Add this to clear sessionStorage
+     Cookies.remove("token");
+    setTimeout(() => router.push("/login"), 1500);
     }
   };
 
