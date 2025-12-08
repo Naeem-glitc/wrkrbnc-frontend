@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { User, Mail, Lock, MapPin, Briefcase, Eye, EyeOff } from "lucide-react";
 import OTP_varificatoin from './OTP_varificatoin'
 import API_BASE_URL from '@/config/api';
+import { handleSuccess } from '@/frontend_utalties/notfication_control'
 
 
 const Worker_signUp = ({ onBack }) => {
@@ -130,6 +131,7 @@ const Worker_signUp = ({ onBack }) => {
       }
 
       setIsSubmiting(true);
+      handleSuccess("Signup successful, proceed to OTP verification");
 
     }
     catch (error) {
