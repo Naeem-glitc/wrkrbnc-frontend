@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { motion } from "framer-motion";
 import { User, Mail, Lock, MapPin, Briefcase, Eye, EyeOff } from "lucide-react";
 import OTP_varificatoin from './OTP_varificatoin'
+import API_BASE_URL from '@/config/api';
 
 
 const Worker_signUp = ({ onBack }) => {
