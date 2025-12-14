@@ -75,20 +75,20 @@ const ProcessChart = () => {
   }, [activeStep]);
 
   return (
-    <div className="m-2">
-  <div className="relative rounded-2xl shadow-2xl overflow-hidden p-4 sm:p-6 lg:p-10 bg-white/80 backdrop-blur-lg border border-gray-100">
+    <div className="">
+  <div className="relative overflow-hidden p-4  bg-black backdrop-blur-lg border border-gray-100">
     {/* Decorative gradient background */}
-    <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-100 via-white to-amber-100"></div>
+    <div className="absolute inset-0 -z-10 bg-white"></div>
 
-    <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold text-center text-blue-600 mb-8 relative pb-2">
-      How We Work
+    <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold text-center   mb-8 relative pb-2">
+      How We <span className="text-pink-500">Work</span> 
     
     </h2>
 
     {/* Horizontal Steps Row */}
     <div className="relative w-full flex justify-between items-center gap-2 sm:gap-6 lg:gap-12">
       {/* Connector line */}
-      <div className="absolute top-10 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 to-amber-200 z-0 rounded-full"></div>
+      <div className="absolute top-10 left-0 right-0 h-1 bg-gradient-to-r from-pink-200 to-pink-200 z-0 rounded-full"></div>
 
       {steps.map((step, index) => (
         <div
@@ -100,20 +100,20 @@ const ProcessChart = () => {
           <div
             className={`flex items-center justify-center rounded-full shadow-lg mb-3 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 ${
               index <= activeStep
-                ? "bg-gradient-to-br from-emerald-400 to-emerald-500 text-white"
-                : "bg-gradient-to-br from-blue-100 to-blue-300 text-blue-500"
+                ? "bg-gradient-to-br from-pink-400 to-pink-500 text-white"
+                : "bg-gradient-to-br from-pink-100 to-pink-300 text-white"
             }`}
           >
             {step.icon}
           </div>
           <h3
             className={`text-xs sm:text-sm lg:text-lg font-semibold mb-1 ${
-              index <= activeStep ? "text-blue-700" : "text-blue-500"
+              index <= activeStep ? "text-pink-700" : "text-pink-500"
             }`}
           >
             {step.title}
           </h3>
-          <p className="text-[10px] sm:text-xs lg:text-sm text-emerald-600">
+          <p className="text-[10px] sm:text-xs lg:text-sm text-gray-600">
             {step.description}
           </p>
         </div>
@@ -122,7 +122,7 @@ const ProcessChart = () => {
 
     {/* Active Step Button */}
     <div className="flex justify-center mt-6 sm:mt-10">
-     <Link href="/login"><button className="bg-amber-500 px-4 py-2 sm:px-6 sm:py-3 hover:bg-amber-600 rounded-lg text-white font-bold text-xs sm:text-sm lg:text-base transition">
+     <Link href="/login"><button className="bg-pink-500 px-4 py-2 sm:px-6 sm:py-3  hover:bg-pink-200 rounded-lg text-white font-bold text-xs sm:text-sm lg:text-base transition">
         {steps[activeStep].title}
       </button></Link>
     </div>

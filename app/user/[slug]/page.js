@@ -174,10 +174,10 @@ export default function WorkerDashboard() {
                 >
                   {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
-                <div className="text-xl font-bold text-emerald-400">Worker Panel</div>
+                <div className="text-xl font-bold text-pink-400">Worker Panel</div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-emerald-400">
+                <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-pink-400">
                   <Image
                     src={worker.Profile_Pic || "/default-avatar.png"}
                     alt="Profile"
@@ -201,7 +201,7 @@ export default function WorkerDashboard() {
               w-64 bg-gray-900 text-gray-200 shadow-xl flex flex-col
               md:flex
             `}>
-              <div className="hidden md:block text-2xl font-bold text-emerald-400 p-6">
+              <div className="hidden md:block text-2xl font-bold text-pink-400 p-6">
                 Worker Panel
               </div>
               <nav className="flex-1 px-4 space-y-3 py-6 md:py-0">
@@ -212,7 +212,7 @@ export default function WorkerDashboard() {
                     className={`
                       flex items-center gap-3 w-full px-4 py-3 rounded-lg font-medium transition
                       ${section === item.id
-                        ? "bg-emerald-500 text-white"
+                        ? "bg-pink-500 text-white"
                         : "hover:bg-gray-700 hover:text-white"
                       }
                     `}
@@ -238,9 +238,9 @@ export default function WorkerDashboard() {
               {/* Profile Section */}
               {section === "profile" && (
                 <div className="bg-white shadow-xl rounded-2xl p-4 md:p-6">
-                  <h2 className="text-lg md:text-xl font-semibold text-emerald-600 mb-4">Profile</h2>
+                  <h2 className="text-lg md:text-xl font-semibold text-pink-600 mb-4">Profile</h2>
                   <div className="flex flex-col items-center md:items-start md:flex-row gap-6">
-                    <div className="relative w-32 h-32 md:w-28 md:h-28 rounded-full overflow-hidden border-4 border-emerald-300 shadow-md">
+                    <div className="relative w-32 h-32 md:w-28 md:h-28 rounded-full overflow-hidden border-4 border-pink-300 shadow-md">
                       <Image
                         src={worker.Profile_Pic || "/default-avatar.png"}
                         alt="Profile"
@@ -250,12 +250,12 @@ export default function WorkerDashboard() {
                     </div>
                     <div className="flex-1 text-center md:text-left">
                       <p className="text-lg font-semibold text-gray-900">{worker.First_Name}.{worker.Last_Name?.charAt(0) || ''}</p>
-                      <p className="text-emerald-600">{worker.Profession}</p>
+                      <p className="text-pink-600">{worker.Profession}</p>
                       <p className="text-gray-600 flex items-center justify-center md:justify-start gap-1">
                         <MapPin size={16} />
                         {worker.City}
                       </p>
-                      <p className="text-amber-500 font-medium mt-2">Available</p>
+                      <p className="text-pink-500 font-medium mt-2">Available</p>
                       <p className="text-gray-700 mt-2">{worker.Description || "No description provided"}</p>
                     </div>
                   </div>
@@ -265,7 +265,7 @@ export default function WorkerDashboard() {
               {/* Services Section */}
               {section === "services" && (
                 <div className="bg-white shadow-xl rounded-2xl p-4 md:p-6">
-                  <h2 className="text-lg md:text-xl font-semibold text-emerald-600 mb-4">Manage Services</h2>
+                  <h2 className="text-lg md:text-xl font-semibold text-pink-600 mb-4">Manage Services</h2>
                   <form onSubmit={addService} className="flex flex-col sm:flex-row gap-3 mt-4">
                     <input
                       type="text"
@@ -287,7 +287,7 @@ export default function WorkerDashboard() {
                     />
                     <button
                       type="submit"
-                      className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg flex items-center justify-center gap-2"
+                      className="bg-black  text-white px-6 py-3 rounded-lg flex items-center justify-center gap-2"
                     >
                       <Plus size={18} />
                       <span>Add</span>
@@ -302,7 +302,7 @@ export default function WorkerDashboard() {
                         >
                           <span className="text-sm md:text-base">
                             {service.title} -{" "}
-                            <span className="text-emerald-600 font-semibold">
+                            <span className="text-pink-600 font-semibold">
                               Rs.{service.price}
                             </span>
                           </span>
@@ -327,7 +327,7 @@ export default function WorkerDashboard() {
               {/* Portfolio Section */}
               {section === "portfolio" && (
                 <div className="bg-white shadow-xl rounded-2xl p-4 md:p-6">
-                  <h2 className="text-lg md:text-xl font-semibold text-emerald-600 mb-4">Manage Portfolio</h2>
+                  <h2 className="text-lg md:text-xl font-semibold text-pink-600 mb-4">Manage Portfolio</h2>
                   <form
                     onSubmit={addportfolio}
                     className="flex flex-col md:flex-row gap-3 mt-4"
@@ -370,8 +370,8 @@ export default function WorkerDashboard() {
       file:mr-4 file:py-2 file:px-4 
       file:rounded-full file:border-0 
       file:text-sm file:font-semibold 
-      file:bg-emerald-50 file:text-emerald-700 
-      hover:file:bg-emerald-100
+      file:bg-pink-50 file:text-pink-700 
+      hover:file:bg-pink-100
     "
                     />
 
@@ -379,7 +379,7 @@ export default function WorkerDashboard() {
                     <button
                       type="submit"
                       className="
-      bg-emerald-500 hover:bg-emerald-600 
+      bg-black
       text-white rounded-lg 
       px-6 py-3 
       h-12 md:h-14

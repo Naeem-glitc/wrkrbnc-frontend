@@ -30,7 +30,7 @@ const Signup = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-500 via-amber-400 to-blue-600 px-4">
+      <div className="flex justify-center items-center min-h-screen  px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -39,10 +39,10 @@ const Signup = () => {
         >
           <div className="rounded-2xl shadow-2xl backdrop-blur-lg bg-white/90 p-8 text-center">
             {/* Heading */}
-            <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-amber-500">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-pink-500">
               Join as a
             </h2>
-            <p className="text-emerald-600 font-medium sm:font-semibold mb-8">
+            <p className="text-black font-medium sm:font-semibold mb-8">
               Choose your role to continue
             </p>
 
@@ -51,10 +51,10 @@ const Signup = () => {
               {/* Worker Option */}
               <button
                 onClick={() => handlerole("worker")}
-                className="group border-2 border-gray-200 rounded-xl p-6 sm:p-8 bg-white hover:border-blue-500 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center"
+                className="group border-2 border-gray-200 rounded-xl p-6 sm:p-8 bg-white hover:border-pink-500 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center"
               >
-                <Briefcase className="h-10 w-10 text-blue-500 mb-3 group-hover:scale-110 transition-transform" />
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800">
+                <Briefcase className="h-10 w-10 text-black mb-3 group-hover:scale-110 transition-transform" />
+                <h3 className="text-base sm:text-lg font-semibold text-pink-500">
                   Worker
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-500 mt-1">
@@ -65,10 +65,10 @@ const Signup = () => {
               {/* Client Option */}
               <button
                 onClick={() => handlerole("client")}
-                className="group border-2 border-gray-200 rounded-xl p-6 sm:p-8 bg-white hover:border-amber-500 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center"
+                className="group border-2 border-gray-200 rounded-xl p-6 sm:p-8 bg-white hover:border-pink-500 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center"
               >
-                <User className="h-10 w-10 text-amber-500 mb-3 group-hover:scale-110 transition-transform" />
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800">
+                <User className="h-10 w-10 text-black mb-3 group-hover:scale-110 transition-transform" />
+                <h3 className="text-base sm:text-lg font-semibold text-pink-500">
                   Client
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-500 mt-1">

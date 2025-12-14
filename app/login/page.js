@@ -57,7 +57,7 @@ export default function LoginPage() {
 
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-500 via-amber-400 to-blue-600 px-4">
+    <div className="flex justify-center items-center min-h-screen bg- px-4">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export default function LoginPage() {
         className="w-full max-w-md"
       >
         <div className="rounded-2xl shadow-2xl backdrop-blur-lg bg-white/90 p-8">
-          <h2 className="text-3xl font-bold text-center text-emerald-600 mb-3">
+          <h2 className="text-3xl font-bold text-center text-pink-600 mb-3">
             Welcome Back
           </h2>
           <p className="text-center text-gray-600 mb-8">
@@ -82,7 +82,7 @@ export default function LoginPage() {
                 placeholder="Enter your email"
                 value={form.Email}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"
                 required
               />
             </div>
@@ -97,7 +97,7 @@ export default function LoginPage() {
                 placeholder="Enter your password"
                 value={form.Password}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-xl pl-10 pr-12 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-xl pl-10 pr-12 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"
                 required
               />
 
@@ -117,10 +117,10 @@ export default function LoginPage() {
 
             {/* Links */}
             <div className="flex justify-between items-center text-sm">
-              <Link href="/forgetpassword" className="text-blue-600 hover:underline">
+              <Link href="/forgetpassword" className="text-black hover:underline">
                 Forgot Password?
               </Link>
-              <Link href="/sign-up" className="text-amber-600 hover:underline">
+              <Link href="/sign-up" className="text-pink-600 hover:underline">
                 Create Account
               </Link>
 
@@ -129,7 +129,7 @@ export default function LoginPage() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-amber-500 text-white py-3 rounded-xl text-lg font-semibold hover:bg-amber-600 transition-all"
+              className="w-full bg-pink-500 text-white py-3 rounded-xl text-lg font-semibold hover:bg-pink-600 transition-all"
             >
               Login
             </button>

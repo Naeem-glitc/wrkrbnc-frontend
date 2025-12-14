@@ -75,7 +75,7 @@ export default function ClientDashboard() {
       <div className="min-h-screen bg-gray-100 flex flex-col md:flex-row">
         {/* Mobile Top Navbar */}
         <div className="md:hidden bg-gray-900 text-white flex items-center justify-between px-5 py-4">
-          <h1 className="text-xl font-semibold">Client Panel</h1>
+          <h1 className="text-xl text-pink-500 font-semibold">Client Panel</h1>
           <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <Menu size={26} />
           </button>
@@ -104,33 +104,33 @@ export default function ClientDashboard() {
 
         {/* Desktop Sidebar */}
         <aside className="hidden md:flex w-64 bg-gray-900 text-gray-200 flex-col">
-          <div className="text-2xl font-bold text-blue-400 p-6">Client Panel</div>
+          <div className="text-2xl font-bold text-pink-400 p-6">Client Panel</div>
 
           <nav className="flex-1 px-4 space-y-3">
             <button
               onClick={() => setSection("profile")}
-              className={`flex items-center gap-2 px-3 py-2 w-full rounded-lg ${section === "profile" ? "bg-blue-500 text-white" : "hover:bg-gray-700"}`}
+              className={`flex items-center gap-2 px-3 py-2 w-full rounded-lg ${section === "profile" ? "bg-pink-500 text-white" : "hover:bg-gray-700"}`}
             >
               <User size={18} /> Profile
             </button>
 
             <button
               onClick={() => setSection("bookings")}
-              className={`flex items-center gap-2 px-3 py-2 w-full rounded-lg ${section === "bookings" ? "bg-blue-500 text-white" : "hover:bg-gray-700"}`}
+              className={`flex items-center gap-2 px-3 py-2 w-full rounded-lg ${section === "bookings" ? "bg-pink-500 text-white" : "hover:bg-gray-700"}`}
             >
               <Briefcase size={18} /> Bookings
             </button>
 
             <button
               onClick={() => setSection("favorites")}
-              className={`flex items-center gap-2 px-3 py-2 w-full rounded-lg ${section === "favorites" ? "bg-blue-500 text-white" : "hover:bg-gray-700"}`}
+              className={`flex items-center gap-2 px-3 py-2 w-full rounded-lg ${section === "favorites" ? "bg-pink-500 text-white" : "hover:bg-gray-700"}`}
             >
               <Heart size={18} /> Favorites
             </button>
 
             <button
               onClick={() => setSection("settings")}
-              className={`flex items-center gap-2 px-3 py-2 w-full rounded-lg ${section === "settings" ? "bg-blue-500 text-white" : "hover:bg-gray-700"}`}
+              className={`flex items-center gap-2 px-3 py-2 w-full rounded-lg ${section === "settings" ? "bg-pink-500 text-white" : "hover:bg-gray-700"}`}
             >
               <Settings size={18} /> Settings
             </button>
@@ -148,17 +148,17 @@ export default function ClientDashboard() {
           {section === "profile" && (
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
               <h2 className="text-xl font-bold text-gray-800 mb-5 flex items-center gap-2">
-                <span className="text-blue-600">My Profile</span>
-                <span className="block h-1 w-8 bg-blue-600 rounded-full"></span>
+                <span className="text-pink-600">My Profile</span>
+                <span className="block h-1 w-8 bg-pink-600 rounded-full"></span>
               </h2>
 
               <div className="space-y-2">
                 <p className="text-lg font-semibold text-gray-900">{client.Name}</p>
                 <p className="text-gray-600 flex items-center gap-1">
-                  <MapPin size={16} className="text-blue-500" /> {client.City}
+                  <MapPin size={16} className="text-pink-500" /> {client.City}
                 </p>
-                <p className="text-green-600 font-medium flex items-center gap-2">
-                  <span className="h-2 w-2 bg-green-500 rounded-full"></span> Verified Client
+                <p className="text-black font-medium flex items-center gap-2">
+                  <span className="h-2 w-2 bg-black rounded-full"></span> Verified Client
                 </p>
               </div>
             </div>
@@ -166,14 +166,14 @@ export default function ClientDashboard() {
 
           {section === "bookings" && (
             <div className="bg-white rounded-2xl p-6 shadow-xl">
-              <h2 className="text-xl font-semibold text-blue-600 mb-4">My Bookings</h2>
+              <h2 className="text-xl font-semibold text-pink-600 mb-4">My Bookings</h2>
               {client.bookings?.length ? (
                 <div className="space-y-4">
                   {client.bookings.map((job, idx) => (
                     <div key={idx} className="p-4 bg-gray-50 rounded-xl shadow-sm">
                       <p className="font-medium text-gray-900">{job.workerName}</p>
                       <p className="text-gray-600">{job.service}</p>
-                      <p className="text-blue-600 font-semibold">Rs. {job.price}</p>
+                      <p className="text-pink-600 font-semibold">Rs. {job.price}</p>
                     </div>
                   ))}
                 </div>
@@ -185,7 +185,7 @@ export default function ClientDashboard() {
 
           {section === "favorites" && (
             <div className="bg-white rounded-2xl p-6 shadow-xl">
-              <h2 className="text-xl font-semibold text-blue-600 mb-4">Favorite Workers</h2>
+              <h2 className="text-xl font-semibold text-pink-600 mb-4">Favorite Workers</h2>
               {client.favorites?.length ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {client.favorites.map((worker, idx) => (
@@ -201,7 +201,7 @@ export default function ClientDashboard() {
                         </div>
                         <div>
                           <p className="font-medium">{worker.First_Name}</p>
-                          <p className="text-blue-600 text-sm">{worker.Profession}</p>
+                          <p className="text-pink-600 text-sm">{worker.Profession}</p>
                         </div>
                       </div>
                     </div>

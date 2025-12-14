@@ -6,12 +6,12 @@ import Footer from "./Footer";
 const Main = () => {
   return (
     <>
-     <div className="bg-gradient-to-br from-blue-100 via-white to-amber-100 text-white text-center">
+     <div className="bg-gray-100 text-white text-center">
       <h1
         id="services"
-        className="text-3xl sm:text-4xl text-center text-amber-500 font-bold py-5"
+        className="text-3xl sm:text-4xl text-center text-black font-bold py-5"
       >
-        We Offer
+        We <span className="text-pink-500">Offer</span>
       </h1>
 
       <p className="text-center max-w-2xl mx-auto px-4 font-semibold text-gray-700">

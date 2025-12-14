@@ -151,7 +151,7 @@ const Worker_signUp = ({ onBack }) => {
   return (
     <>
 
-      <div className="flex justify-center p-10 items-center min-h-screen bg-gradient-to-br from-blue-500 via-amber-400 to-blue-600 px-4">
+      <div className="flex justify-center p-10 items-center min-h-screen  px-4">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -160,7 +160,7 @@ const Worker_signUp = ({ onBack }) => {
       >
         <div className="rounded-2xl shadow-2xl backdrop-blur-lg bg-white/90 p-4">
           {/* Heading */}
-          <h1 className="text-emerald-600 font-bold text-center text-3xl sm:text-4xl mb-6">
+          <h1 className="text-pink-600 font-bold text-center text-3xl sm:text-4xl mb-6">
             SignUp As Professional
           </h1>
 
@@ -177,7 +177,7 @@ const Worker_signUp = ({ onBack }) => {
                   onChange={handleChange}
                   name="First_Name"
                   placeholder="First Name"
-                  className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"
                 />
               </div>
               <div className="relative w-full">
@@ -189,7 +189,7 @@ const Worker_signUp = ({ onBack }) => {
                   onChange={handleChange}
                   name="Last_Name"
                   placeholder="Last Name"
-                  className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"
                 />
               </div>
             </div>
@@ -204,7 +204,7 @@ const Worker_signUp = ({ onBack }) => {
                 onChange={handleChange}
                 name="Email"
                 placeholder="Enter Your Email"
-                className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"
               />
             </div>
 
@@ -216,7 +216,7 @@ const Worker_signUp = ({ onBack }) => {
                 onChange={handleChange}
                 value={formdata.City}
                 name="City"
-                className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"
               >
                 <option className="text-gray-400" value="">
                   Select your City
@@ -239,7 +239,7 @@ const Worker_signUp = ({ onBack }) => {
                 onChange={handleChange}
                 name="Address"
                 placeholder="Enter Your Address"
-                className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"
               />
             </div>
 
@@ -251,7 +251,7 @@ const Worker_signUp = ({ onBack }) => {
                 onChange={handleChange}
                 value={formdata.Profession}
                 name="Profession"
-                className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"
               >
                 <option className="text-gray-400" value="">
                   Select your Profession
@@ -273,7 +273,7 @@ const Worker_signUp = ({ onBack }) => {
                                     placeholder="Enter your password"
                                     value={formdata.Password}
                                     onChange={handleChange}
-                                    className="w-full border border-gray-300 rounded-xl pl-10 pr-12 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="w-full border border-gray-300 rounded-xl pl-10 pr-12 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"
                                     required
                                 />
                                 <button
@@ -312,14 +312,14 @@ const Worker_signUp = ({ onBack }) => {
               <label htmlFor="Link-checkbox" className="text-sm">
                 I agree to the WrkrBnC{" "}
                 <a
-                  className="text-blue-600 hover:underline hover:text-blue-800"
+                  className="text-pink-600 hover:underline hover:text-pink-800"
                   href="/user-agrement"
                 >
                   User Agreement
                 </a>{" "}
                 and{" "}
                 <a
-                  className="text-blue-600 hover:underline hover:text-blue-800"
+                  className="text-pink-600 hover:underline hover:pink-blue-800"
                   href="/privacypolicy"
                 >
                   Privacy Policy
@@ -332,7 +332,7 @@ const Worker_signUp = ({ onBack }) => {
             <button
               type="submit"
               disabled={isSubmiting}
-              className="w-full bg-amber-500 text-white py-3 rounded-xl text-lg font-semibold hover:bg-amber-600 transition-all"
+              className="w-full bg-pink-500 text-white py-3 rounded-xl text-lg font-semibold hover:bg-pink-600 transition-all"
             >
               Sign Up
             </button>
@@ -342,7 +342,7 @@ const Worker_signUp = ({ onBack }) => {
           <p className="text-center mt-6 text-sm sm:text-base">
             Already have an account?{" "}
             <a
-              className="text-blue-600 hover:underline hover:text-blue-800"
+              className="text-black hover:underline"
               href="/login"
             >
               Login
@@ -353,7 +353,7 @@ const Worker_signUp = ({ onBack }) => {
           <div className="flex justify-center sm:justify-end mt-6">
             <button
               onClick={onBack}
-              className=" font-semibold text-amber-500 py-2 px-5 rounded-xl hover:underline cursor-pointer transition-all"
+              className=" font-semibold text-pink-500 py-2 px-5 rounded-xl hover:underline cursor-pointer transition-all"
             >
               ← Back
             </button>

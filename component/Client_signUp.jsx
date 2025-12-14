@@ -111,7 +111,7 @@ const Client_signUp = ({ onBack }) => {
 
     return (
         <>
-            <div className="flex justify-center p-10 items-center min-h-screen bg-gradient-to-br from-blue-500 via-amber-400 to-blue-600 px-4">
+            <div className="flex justify-center p-10 items-center min-h-screen  px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -119,7 +119,7 @@ const Client_signUp = ({ onBack }) => {
                     className="w-full max-w-lg"
                 >
                     <div className="rounded-2xl shadow-2xl backdrop-blur-lg bg-white/90 p-5">
-                        <h2 className="text-3xl font-bold text-center text-emerald-600 mb-3">
+                        <h2 className="text-3xl font-bold text-center text-pink-600 mb-3">
                             SignUp
                         </h2>
                         <p className="text-center text-gray-600 mb-8">
@@ -137,7 +137,7 @@ const Client_signUp = ({ onBack }) => {
                                     type="text"
                                     name="Name"
                                     placeholder="Enter Your Name"
-                                    className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"
                                 />
                             </div>
 
@@ -151,7 +151,7 @@ const Client_signUp = ({ onBack }) => {
                                     type="email"
                                     name="Email"
                                     placeholder="Enter Your Email"
-                                    className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"
                                 />
                             </div>
 
@@ -163,7 +163,7 @@ const Client_signUp = ({ onBack }) => {
                                     value={formdata.City}
                                     required
                                     name="City"
-                                    className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"
                                 >
                                     <option value="">Select your City</option>
                                     {punjabDistricts.map((district, index) => (
@@ -184,7 +184,7 @@ const Client_signUp = ({ onBack }) => {
                                     type="text"
                                     name="Address"
                                     placeholder="Enter Your Address"
-                                    className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="w-full border border-gray-300 rounded-xl pl-10 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"
                                 />
                             </div>
 
@@ -197,7 +197,7 @@ const Client_signUp = ({ onBack }) => {
                                     placeholder="Enter your password"
                                     value={formdata.Password}
                                     onChange={handlechange}
-                                    className="w-full border border-gray-300 rounded-xl pl-10 pr-12 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="w-full border border-gray-300 rounded-xl pl-10 pr-12 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"
                                     required
                                 />
                                 <button
@@ -218,11 +218,11 @@ const Client_signUp = ({ onBack }) => {
                                 <input required type="checkbox" id="Link-checkbox" />
                                 <label htmlFor="Link-checkbox">
                                     I agree to the WrkrBnC{" "}
-                                    <a className="text-blue-600 hover:underline" href="/user-agrement">
+                                    <a className="text-pink-600 hover:underline" href="/user-agrement">
                                         User Agreement
                                     </a>{" "}
                                     and{" "}
-                                    <a className="text-blue-600 hover:underline" href="/privacypolicy">
+                                    <a className="text-pink-600 hover:underline" href="/privacypolicy">
                                         Privacy Policy
                                     </a>.
                                 </label>
@@ -231,7 +231,7 @@ const Client_signUp = ({ onBack }) => {
                             {/* Submit Button */}
                             <button
                                 type="submit"
-                                className="w-full bg-amber-500 text-white py-3 rounded-xl text-lg font-semibold hover:bg-amber-600 transition-all"
+                                className="w-full bg-pink-500 text-white py-3 rounded-xl text-lg font-semibold hover:bg-pink-600 transition-all"
                             >
                                 Sign Up
                             </button>
@@ -239,12 +239,12 @@ const Client_signUp = ({ onBack }) => {
 
                         {/* Links */}
                         <div className="flex justify-between items-center mt-6 text-sm">
-                            <a href="/login" className="text-blue-600 hover:underline">
+                            <a href="/login" className="text-black hover:underline">
                                 Already have an account? Login
                             </a>
                             <button
                                 onClick={onBack}
-                                className="text-amber-600 hover:underline"
+                                className="text-pink-600 hover:underline"
                             >
                                 ← Back
                             </button>

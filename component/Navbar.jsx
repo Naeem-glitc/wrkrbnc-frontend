@@ -44,7 +44,7 @@ const Navbar = () => {
         >
           How It Works
         </Link>
-        <button className="border-0 text-white rounded-md px-4 py-2 font-semibold bg-blue-600 hover:bg-blue-800 transition-colors">
+        <button className="border-0 text-white rounded-md px-4 py-2 font-semibold bg-pink-500 hover:bg-pink-300 transition-colors">
          <a href="/login">Login</a> 
         </button>
       </div>
@@ -74,7 +74,7 @@ const Navbar = () => {
           >
             How It Works
           </Link>
-          <button className="border-0 text-white rounded-md px-4 py-2 font-semibold bg-blue-600 hover:bg-blue-800 transition-colors">
+          <button className="border-0 text-white rounded-md px-4 py-2 font-semibold bg-pink-500 hover:bg-pink-300 transition-colors">
             Login
           </button>
         </div>

@@ -33,7 +33,7 @@ const Setting = ({id}) => {
     return (
         <>
             <div className="bg-white shadow-xl rounded-2xl p-6 space-y-8">
-                <h2 className="text-xl font-semibold text-emerald-600 mb-4">Account Settings</h2>
+                <h2 className="text-xl font-semibold text-pink-600 mb-4">Account Settings</h2>
 
 
                 {/* Delete Account */}

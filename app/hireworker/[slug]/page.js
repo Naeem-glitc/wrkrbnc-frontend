@@ -74,7 +74,7 @@ if(isLoading){
   return (
     <>
       <Client_Navbar />
-      <div className=''>
+      <div className='bg-gray-50'>
         {worker.length === 0 && <div className="text-gray-500  font-semibold text-7xl w-full p-12 text-center">No workers available.</div>}
         <div className="flex flex-col items-center justify-center p-4">
           {/* Workers Section */}
@@ -84,7 +84,7 @@ if(isLoading){
             {worker? (worker.map((worker) => (
               <div
                 key={worker._id}
-                className="bg-white w-full shadow-md hover:shadow-xl hover:scale-105 transform transition-all duration-200 rounded-2xl border border-gray-200 hover:border-blue-600 hover:border-2 overflow-hidden"
+                className="bg-white w-full group-active: shadow-md hover:shadow-xl hover:scale-100 transform transition-all duration-200 rounded-2xl border border-gray-200  hover:border-2 overflow-hidden"
               >
                 {/* Profile Picture */}
                 <Image
@@ -98,14 +98,14 @@ if(isLoading){
                 {/* Card Content */}
                 <div className="p-3 sm:p-4">
                   <h1 className="font-semibold text-lg sm:text-xl flex items-center gap-2 text-gray-800">
-                    <User className="h-5 w-5 text-amber-500" />
+                    <User className="h-5 w-5 text-pink-500" />
                     {worker.First_Name}.{worker.Last_Name.charAt(0)}
                   </h1>
 
                   {/* Tailwind Button */}
                   <Link href={`/worker/${worker._id}`}>
                   <button
-                    className="mt-3 w-full py-1.5 sm:py-2 px-3 sm:px-4 rounded-lg border border-amber-500 text-amber-500 text-sm sm:text-base font-medium hover:bg-amber-500 hover:text-white transition-colors"
+                    className="mt-3 w-full py-1.5 sm:py-2 px-3 sm:px-4 rounded-lg border border-pink-500 text-pink-500 text-sm sm:text-base font-medium hover:bg-pink-500 hover:text-white transition-colors"
                   >
                     View Profile
                   </button>
@@ -114,7 +114,7 @@ if(isLoading){
               </div>
             ))):(
             <>
-              <div className="text-gray-500  font-semibold text-7xl w-full p-12 text-center">No workers found.</div>
+              <div className="text-pink-500  font-semibold text-7xl w-full p-12 text-center">No workers found.</div>
             </>)}
           </section>
         </div>

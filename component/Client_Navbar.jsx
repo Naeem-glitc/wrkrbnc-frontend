@@ -58,9 +58,9 @@ const Client_Navbar = () => {
   return (
     <nav className="w-full shadow-md ">
       {/* Top Navbar */}
-      <div className="flex items-center justify-between px-4 py-3 bg-blue-50 sm:px-6">
+      <div className="flex items-center justify-between px-4 py-3 bg-white sm:px-6">
         {/* Logo */}
-        <div className="text-xl font-bold text-black sm:text-2xl">WrkrBnC.</div>
+        <div className="text-xl font-bold text-pink-500 sm:text-2xl">WrkrBnC.</div>
 
         {/* Search Bar - Hidden on mobile, visible on medium screens and up */}
         <form 
@@ -72,11 +72,11 @@ const Client_Navbar = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search for services..."
-            className="w-full border border-gray-300 rounded-l-full py-2 px-4 focus:outline-none focus:border-amber-500 text-sm sm:text-base"
+            className="w-full border border-gray-300 rounded-l-full py-2 px-4 focus:outline-none focus:border-pink-500 text-sm sm:text-base"
           />
           <button 
             type="submit" 
-            className="bg-amber-500 hover:bg-amber-600 text-white px-4 rounded-r-full py-3"
+            className="bg-pink-500 hover:bg-pink-600 text-white px-4 rounded-r-full py-3"
           >
             <Search className="w-5 h-4.5" />
           </button>
@@ -84,7 +84,7 @@ const Client_Navbar = () => {
 
         {/* Mobile Search Button */}
         <button 
-          className="md:hidden relative  bg-amber-500 hover:bg-amber-600 text-white p-2 rounded-full ml-auto"
+          className="md:hidden relative  bg-pink-500 hover:bg-pink-600 text-white p-2 rounded-full ml-auto"
           onClick={toggleMobileMenu}
         >
           {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -97,7 +97,7 @@ const Client_Navbar = () => {
             alt="Profile"
             width={40}
             height={40}
-            className="rounded-full border border-emerald-500"
+            className="rounded-full border border-pink-500"
           />
           <span className="font-medium text-gray-700">{user.Name}</span>
         </div></Link>
@@ -112,11 +112,11 @@ const Client_Navbar = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search for services..."
-              className="w-full border border-gray-300 rounded-l-full py-2 px-4 focus:outline-none focus:border-amber-500 text-sm"
+              className="w-full border border-gray-300 rounded-l-full py-2 px-4 focus:outline-none focus:border-pink-500 text-sm"
             />
             <button 
               type="submit" 
-              className="bg-amber-500 hover:bg-amber-600 text-white px-4 rounded-r-full py-2"
+              className="bg-pink-500 hover:bg-pink-600 text-white px-4 rounded-r-full py-2"
             >
               <Search className="w-5 h-5" />
             </button>
@@ -125,7 +125,7 @@ const Client_Navbar = () => {
       )}
 
       {/* Sub Navbar */}
-      <div className="bg-emerald-600 text-white px-4 py-2 hidden md:flex flex-wrap items-center justify-center gap-4 lg:gap-6 text-sm font-medium">
+      <div className=" text-black bg-white px-4 py-2 hidden md:flex flex-wrap items-center justify-center gap-4 lg:gap-6 text-sm font-medium">
         {[
           "AC Repairing",
           "Plumbing",
@@ -138,7 +138,7 @@ const Client_Navbar = () => {
           <button
             key={idx}
             onClick={() => handleClick(item)}
-            className="hover:text-blue-200 cursor-pointer transition-colors whitespace-nowrap"
+            className="hover:text-pink-700 cursor-pointer transition-colors whitespace-nowrap"
           >
             {item}
           </button>
@@ -147,7 +147,7 @@ const Client_Navbar = () => {
 
       {/* Mobile Sub Navbar - Only visible when menu is open */}
       {isMobileMenuOpen && (
-        <div className="bg-emerald-600 text-white px-4 py-3 md:hidden">
+        <div className=" text-white px-4 py-3 md:hidden">
           <div className="grid grid-cols-2 gap-2">
             {[
               "AC Repairing",
@@ -161,7 +161,7 @@ const Client_Navbar = () => {
               <button
                 key={idx}
                 onClick={() => handleClick(item)}
-                className="hover:text-blue-200 cursor-pointer transition-colors text-sm py-2 text-center bg-emerald-700 rounded-lg hover:bg-emerald-800"
+                className="hover:text-blue-200 cursor-pointer transition-colors text-sm py-2 text-center bg-pink-400 rounded-lg hover:bg-pink-500"
               >
                 {item}
               </button>
@@ -175,9 +175,9 @@ const Client_Navbar = () => {
               alt="Profile"
               width={36}
               height={36}
-              className="rounded-full border border-emerald-400"
+              className="rounded-full border border-pink-400"
             />
-            <span className="font-medium text-white">{user.Name}</span>
+            <span className="font-medium text-pink-500">{user.Name}</span>
           </div></Link> 
         </div>
       )}
