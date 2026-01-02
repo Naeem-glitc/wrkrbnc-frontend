@@ -75,7 +75,7 @@ const ProcessChart = () => {
   }, [activeStep]);
 
   return (
-    <div className="">
+    <div className="howitworks">
   <div className="relative overflow-hidden p-4  bg-black backdrop-blur-lg border border-gray-100">
     {/* Decorative gradient background */}
     <div className="absolute inset-0 -z-10 bg-white"></div>
