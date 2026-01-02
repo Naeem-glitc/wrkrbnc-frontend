@@ -16,6 +16,7 @@ export default function LoginPage() {
   const [Login, setLogin] = useState(false)
   const [showPassword, setShowPassword] = useState(false);
   const [form, setForm] = useState({ Email: "", Password: "" });
+  const [isSubmitin, setIsSubmitin] = useState(false)
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -23,7 +24,7 @@ export default function LoginPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setIsSubmitin(true);
     try {
       const user = await axios.post(`${API_BASE_URL}/userLogin`, form, {
         headers: { 'Content-Type': 'application/json' },
@@ -128,6 +129,7 @@ export default function LoginPage() {
 
             {/* Submit Button */}
             <button
+              disabled={isSubmitin}
               type="submit"
               className="w-full bg-pink-500 text-white py-3 rounded-xl text-lg font-semibold hover:bg-pink-600 transition-all"
             >
